@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Candidate Email Response Tool</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-8">HR Candidate Email Response Tool</h1>
+
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <form id="email-form">
+        <div class="mb-4">
+          <label for="candidate" class="block text-gray-700">Select Candidate:</label>
+          <select id="candidate" class="border border-gray-300 p-2 w-full rounded-md" required>
+            <!-- Candidate list will be dynamically populated -->
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label for="template" class="block text-gray-700">Select Email Template:</label>
+          <select id="template" class="border border-gray-300 p-2 w-full rounded-md" required>
+            <option value="interview">Interview Invitation</option>
+            <option value="rejection">Rejection Letter</option>
+            <option value="followup">Follow-up Request</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label for="email-body" class="block text-gray-700">Email Body:</label>
+          <textarea id="email-body" class="border border-gray-300 p-2 w-full rounded-md" rows="8" required></textarea>
+        </div>
+
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Send Email</button>
+      </form>
+
+      <div id="status-message" class="mt-4 hidden"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

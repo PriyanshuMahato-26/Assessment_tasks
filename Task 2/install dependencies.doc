@@ -1,0 +1,12 @@
+
+npm init -y
+
+npm install
+
+npm install express nodemailer body-parser cors mongoose
+
+To run the backend::--
+
+//node server.js
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-8">Admin Panel - Manage Questions</h1>
+
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <form id="question-form">
+        <h2 class="text-2xl font-semibold mb-4">Add a New Question</h2>
+        <div class="mb-4">
+          <label for="question" class="block text-gray-700">Question:</label>
+          <input type="text" id="question" class="border border-gray-300 p-2 w-full rounded-md" required>
+        </div>
+        <div class="mb-4">
+          <label for="answer" class="block text-gray-700">Answer:</label>
+          <input type="text" id="answer" class="border border-gray-300 p-2 w-full rounded-md" required>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Add Question</button>
+      </form>
+
+      <div id="questions-list" class="mt-6">
+        <h2 class="text-2xl font-semibold mb-4">All Questions</h2>
+        <ul class="list-disc list-inside">
+          <!-- Questions will appear here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/admin.js"></script>
+</body>
+</html>

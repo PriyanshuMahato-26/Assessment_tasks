@@ -1,0 +1,5 @@
+Backend (Server)
+For the backend, we will use Node.js, Express, and MongoDB
+
+npm init -y
+npm install express mongoose body-parser cors

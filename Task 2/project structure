@@ -1,0 +1,22 @@
+/hr-email-tool
+│
+├── /client
+│   ├── /assets
+│   │   ├── /css
+│   │   │   └── styles.css
+│   │   └── /js
+│   │       └── main.js
+│   ├── index.html
+│
+├── /server
+│   ├── /controllers
+│   │   └── emailController.js
+│   ├── /models
+│   │   └── candidateModel.js
+│   ├── /routes
+│   │   └── emailRoutes.js
+│   ├── server.js
+│   └── package.json
+├── /config
+│   └── db.js
+└── /README.md

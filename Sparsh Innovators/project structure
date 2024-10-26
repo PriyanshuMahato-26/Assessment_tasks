@@ -1,0 +1,25 @@
+/assessment-platform
+│
+├── /client
+│   ├── /assets
+│   │   ├── /css
+│   │   │   └── styles.css
+│   │   └── /js
+│   │       ├── main.js
+│   │       └── admin.js
+│   ├── index.html
+│   └── admin.html
+│
+├── /server
+│   ├── /controllers
+│   │   └── assessmentController.js
+│   ├── /models
+│   │   ├── questionModel.js
+│   │   └── userModel.js
+│   ├── /routes
+│   │   └── assessmentRoutes.js
+│   ├── server.js
+│   └── package.json
+├── /config
+│   └── db.js
+└── /README.md
