@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Attendance</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-6">
+
+  <!-- Attendance Header -->
+  <header class="text-center mb-6">
+    <h1 class="text-2xl font-bold text-gray-800">Employee Weekly Attendance</h1>
+  </header>
+
+  <!-- Attendance Table -->
+  <main class="container mx-auto">
+    <div class="bg-white p-6 rounded shadow-md">
+      <table class="min-w-full table-auto">
+        <thead>
+          <tr class="bg-blue-500 text-white">
+            <th class="px-4 py-2">Day</th>
+            <th class="px-4 py-2">Attendance</th>
+            <th class="px-4 py-2">Comments</th>
+          </tr>
+        </thead>
+        <tbody id="attendanceBody">
+          <!-- Days of the Week -->
+          <script>
+            // This part generates rows for each day dynamically using JavaScript
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+            days.forEach(day => {
+              document.write(`
+                <tr class="bg-gray-100 border-b">
+                  <td class="px-4 py-2 text-center font-medium">${day}</td>
+                  <td class="px-4 py-2 text-center">
+                    <select class="w-full p-2 border rounded" onchange="updateAttendance('${day}', this.value)">
+                      <option value="Present">Present</option>
+                      <option value="Absent">Absent</option>
+                      <option value="Remote">Remote</option>
+                      <option value="Half-Day">Half-Day</option>
+                    </select>
+                  </td>
+                  <td class="px-4 py-2 text-center">
+                    <input type="text" placeholder="Optional comments" class="w-full p-2 border rounded" onchange="updateComment('${day}', this.value)">
+                  </td>
+                </tr>
+              `);
+            });
+          </script>
+        </tbody>
+      </table>
+
+      <button onclick="submitAttendance()" class="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-700">Submit Attendance</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
